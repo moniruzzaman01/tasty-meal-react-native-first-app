@@ -4,14 +4,14 @@ import React from "react";
 export default function Meal({ meal }) {
   const { strMeal, idMeal, strMealThumb } = meal;
   return (
-    <View>
-      <Text>
-        {idMeal} - {strMeal}
-      </Text>
+    <View style={{ marginBottom: 20 }}>
       <Image
         source={{ uri: strMealThumb }}
         style={{ width: 200, height: 200 }}
       />
+      <Text>
+        {idMeal} - {strMeal}
+      </Text>
     </View>
   );
 }

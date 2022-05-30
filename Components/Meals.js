@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, StyleSheet } from "react-native";
 import Meal from "./Meal";
 
 const Meals = () => {
@@ -12,7 +12,7 @@ const Meals = () => {
 
   return (
     <ScrollView>
-      <Text>Hello I am from Meals. I found - {meals.length} </Text>
+      <Text style={styles.mealContainer}>Meals found - {meals.length} </Text>
       {meals.map((meal, key) => (
         <Meal key={key} meal={meal} />
       ))}
@@ -21,3 +21,11 @@ const Meals = () => {
 };
 
 export default Meals;
+
+const styles = StyleSheet.create({
+  mealContainer: {
+    fontSize: 20,
+    color: "lime",
+    marginBottom: 20,
+  },
+});
